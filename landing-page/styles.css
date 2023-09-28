@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: #1F2937;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.header-text {
+    margin-right: auto;
+    color: #F9FAF8;
+    font-size: 24px;
+}
+
+.header-links {
+    display: flex;
+    list-style-type: none;
+    
+    gap: 20px;
+}
+
+.header-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.hero {
+    background-color: #1F2937;
+    display: flex;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.hero-text {
+    max-width: 400px;
+    margin-right: auto;
+    flex: 1 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+    background-color: #3882F6;
+    width:150px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    color: #F9FAF8;
+}
+
+.random-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.random-container h3 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.card img{
+    border-radius: 10px;
+}
+
+.text {
+    max-width: 250px;
+}
+
+.quote-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 200px;
+    background-color: #E5E7EB;    
+}
+
+.quote-text {
+    color: #1F2937;
+    font-size: 36px;
+    font-style: italic;
+}
+
+.quote-author {
+    align-self:self-end;
+    font-weight: 900;
+}
+
+footer {
+    margin: 75px 150px;
+    padding: 25px 50px;
+    background-color: #3882F6;
+    display: flex;
+    border-radius: 10px;
+}
+
+.footer-text {
+    margin-right: auto;
+}
+
+.footer-title {
+    font-weight: 900;
+    color: white;
+    font-size: medium;
+}
+
+.footer-underline {
+    font-size: small;
+    color: white;
+}
+
+.footer-button {
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
