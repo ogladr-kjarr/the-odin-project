@@ -1,0 +1,36 @@
+table,
+td {
+    border: 1px solid black;
+    width: 300px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+.buttons {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.current-game,
+.game-text {
+    width: 300px;
+}
+

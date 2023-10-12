@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="game.js"></script> 
+    <title>Rock Paper Scissors</title>
+    <script src="game.js" defer></script> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <body>
+        <div class="buttons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
     
+        <div class="results-container">
+            <table>
+                <tr>
+                    <th>Your Games Won</th>
+                    <th>Computer Games Won</th>
+                </tr>
+                <tr>
+                    <td class="human-tally">0</td>
+                    <td class="computer-tally">0</td>
+                </tr>
+            </table>
+
+            <div class="current-game">
+                <p class="game-text"></p>
+            </div>
+        </div>
+    </body>
 </body>
 </html>
