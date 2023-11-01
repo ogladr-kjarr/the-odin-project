@@ -1,6 +1,8 @@
 let calculator = {
     operandA: null,
+    operandAPeriod: null,
     operandB: null,
+    operandBPeriod: null,
     operation: null,
     isAnswer: false,
     displayValue: null,
@@ -45,6 +47,7 @@ function onEqualsClick(event){
             calculator.operandA = calculatedValue;
             calculator.isAnswer = true;
             calculator.operandB = null;
+            calculator.operandBPeriod = null;
             calculator.operation = null;     
             updateDisplay(calculatedValue);        
     }
@@ -60,6 +63,7 @@ function onOperationClick(event) {
         calculator.operandA = calculatedValue;
         calculator.isAnswer = true;
         calculator.operandB = null;
+        calculator.operandBPeriod = null;
         calculator.operation = event.currentTarget.innerText;     
         updateDisplay(calculatedValue);
     }else if(calculator.operandA != null){
@@ -74,7 +78,9 @@ function onOperationClick(event) {
 
 function onClearClick(){
     calculator.operandA = null;
+    calculator.operandAPeriod = null;
     calculator.operandB = null;
+    calculator.operandBPeriod = null;
     calculator.operation = null;
     calculator.isAnswer = false;
     calculator.displayValue = null;
@@ -110,9 +116,38 @@ function onNumberClick(event) {
     }
 }
 
+function onPeriodClick(event){
+    if(calculator.operation == null){
+        if(calculator.operandAPeriod == null){
+            if(calculator.operandA == null){
+                calculator.operandA = ".";
+            } else {
+                calculator.operandA += ".";
+            }
+            calculator.operandAPeriod = true;
+            updateDisplay(calculator.operandA);
+        }
+    } else {
+        if(calculator.operandBPeriod == null){
+            if(calculator.operandB == null) {
+                calculator.operandB = ".";
+            } else {
+                calculator.operandB += ".";
+            }
+            calculator.operandBPeriod = true;
+            updateDisplay(calculator.operandB);
+        }
+    }
+}
+
+function addPeriodEventListener(){
+    const periodButton = document.querySelector(".period");
+    periodButton.addEventListener("click", onPeriodClick);
+}
+
 function addNumberEventListeners(){
 
-    const numberButtons = document.querySelectorAll(".number")
+    const numberButtons = document.querySelectorAll(".number");
 
     for(let i = 0; i < numberButtons.length; i++){
         numberButtons[i].addEventListener("click", onNumberClick);
@@ -141,3 +176,4 @@ addNumberEventListeners();
 addOperationEventListeners();
 addEqualsEventListener();
 addClearEventListener();
+addPeriodEventListener();
