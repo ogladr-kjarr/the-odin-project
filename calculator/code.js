@@ -140,6 +140,30 @@ function onPeriodClick(event){
     }
 }
 
+function onBackspaceClick(event){
+    if(calculator.operation == null){
+        if(calculator.operandA != null){
+            let length = calculator.operandA.toString().length;
+            let currentChar = calculator.operandA.toString().substr(length - 1, length);
+            calculator.operandA = calculator.operandA.toString().substr(0, length - 1);
+            if(currentChar == "."){
+                calculator.operandAPeriod = null;
+            }
+            updateDisplay(calculator.operandA);
+        }
+    } else {
+        if(calculator.operandB != null){
+            let length = calculator.operandB.toString().length;
+            let currentChar = calculator.operandB.toString().substr(length - 1, length);
+            calculator.operandB = calculator.operandB.toString().substr(0, length - 1);
+            if(currentChar == "."){
+                calculator.operandBPeriod = null;
+            }
+            updateDisplay(calculator.operandB);
+        }
+    }
+}
+
 function addPeriodEventListener(){
     const periodButton = document.querySelector(".period");
     periodButton.addEventListener("click", onPeriodClick);
@@ -172,8 +196,14 @@ function addClearEventListener() {
     clearButton.addEventListener("click", onClearClick);
 }
 
+function addBackspaceEventListener() {
+    const backspaceButton = document.querySelector(".backspace");
+    backspaceButton.addEventListener("click", onBackspaceClick);
+}
+
 addNumberEventListeners();
 addOperationEventListeners();
 addEqualsEventListener();
 addClearEventListener();
 addPeriodEventListener();
+addBackspaceEventListener();
