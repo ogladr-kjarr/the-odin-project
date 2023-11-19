@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="password-check.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="lhs half-container">
+            <img class="wallpaper" src="images/background.jpg" alt="Spiderweb">
+
+            <div class="main-logo-background">
+            </div>
+
+            <div class="main-logo">
+                <img src="images/odin-lined.png" alt="Odin logo face">
+            </div>
+
+            <div class="photo-attribution">
+                Photo by <a href="https://unsplash.com/@merittthomas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Meritt Thomas</a> on <a href="https://unsplash.com/photos/green-leafed-plants-pkf3OF80J6g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </div>
+        </div>
+        <div class="rhs half-container">
+
+            <div class="header">
+                <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p class="tagline">You <em>know</em> you want to.</p>
+
+            </div>
+
+            <div class="form">
+                <p>Let's do this!</p>
+
+                <form action="dummyform/signup" method="post" class="form-controls">
+                    <div class="left-form-column">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" tabindex="1">
+
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" tabindex="3">
+
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" class="error" tabindex="5">
+                    </div>
+
+                    <div class="right-form-column">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" tabindex="2">
+
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" id="phone-number" tabindex="4">
+                        
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" class="error" tabindex="6">                        
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer">
+                <button>Create Account</button>
+                <p>Already have an account? <a href="dummyform/login">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

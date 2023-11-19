@@ -1,0 +1,162 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+        display: flex;
+        background-color: rgb(44, 37, 37);
+    }
+
+    .rhs {
+        width: 63%; 
+        height: 100vh;
+        margin-right: 300px;
+    }
+
+    .lhs {
+        width: 37%;
+        height: 100vh;
+        position: relative;
+        margin-left: 300px;
+    }
+
+    .wallpaper {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+    }
+
+    .lhs a:link,
+    .lhs a:visited {
+        color: white;
+    }
+
+    .photo-attribution {
+        position: absolute;
+        bottom: 1rem;
+        left: 20%;
+        color: white;
+    }
+    
+    .main-logo-background {
+        position: absolute;
+        background-color: black;
+        height: 250px;
+        width: 100%;
+        top: 10rem;
+        left: 0px;
+        opacity: 40%;
+    }
+
+    .main-logo img {
+        position: absolute;
+        top:11.5rem;
+        left: 3rem;
+        width: 150px;
+        height: auto;
+        opacity: 100%;
+    }
+
+.rhs .header,
+.rhs .footer {
+    height: 35%;
+    background-color: rgb(248, 248, 248);
+}
+
+.header {
+    font-weight: 900;
+    font-size: 1.3em;
+    padding-left: 5%;
+}
+
+.main-text {
+    padding-top: 20%;
+    padding-right: 20%;
+}
+
+.tagline {
+    padding-top: 3%;
+}
+
+.form {
+    background-color: white;
+    height: 30%;
+    padding-left: 5%;   
+}
+
+.form-controls {
+        display: flex;
+}
+
+.left-form-column,
+.right-form-column {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form label {
+    font-weight: 900;
+    font-size: smaller;
+    margin-top: 15px;
+}
+.form input {
+    width: 250px;
+    height: 30px;
+    margin-right: 75px;
+    box-sizing: border-box;
+    border-color: rgb(235, 235, 235);
+    border-style: solid;
+    border-radius: 3px;
+    outline: none;
+    font-size: large;
+}
+
+.form input:focus {
+    /* border-color: rgb(211, 211, 241); */
+    box-shadow: 3px 3px rgb(223, 221, 221);
+    border: 1px solid blue;
+}
+
+.form .error {
+    border: 2px solid rgb(194, 24, 24);
+}
+
+.form .error::after {
+    content: "Passwords do not match";
+}
+.form p {
+    font-weight: 900;
+    font-size: larger;
+    padding-top: 3%;
+}
+
+
+.footer {
+    padding-left: 5%;
+}
+.footer button {
+    background-color: #596D48;
+    color: white;
+    height: 50px;
+    width: 220px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    font-weight:bolder;
+    font-size:large;
+}
+
+.footer a:link,
+.footer a:visited {
+    color: green;
+    font-weight: 900;
+    text-decoration: none;
+}
