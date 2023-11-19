@@ -1,5 +1,6 @@
 const firstPasswordField = document.querySelector("#password");
 const secondPasswordField = document.querySelector("#confirm-password");
+const passwordLabel = document.querySelector(".password-label");
 
 
 function arePasswordsEqual() {
@@ -17,17 +18,21 @@ function arePasswordsMarkedInError() {
     return areError;
 }
 
+function toggleStyling() {
+    firstPasswordField.classList.toggle("error");
+    secondPasswordField.classList.toggle("error");
+    passwordLabel.classList.toggle("password-label");
+}
+
 function onPasswordChange() {
 
     if (arePasswordsEqual() && arePasswordsFilled()) {
         if (arePasswordsMarkedInError()) {
-            firstPasswordField.classList.toggle("error");
-            secondPasswordField.classList.toggle("error");
+            toggleStyling();
         }
     } else {
         if (!arePasswordsMarkedInError()){
-            firstPasswordField.classList.toggle("error");
-            secondPasswordField.classList.toggle("error");
+            toggleStyling();
         }
     }
 }

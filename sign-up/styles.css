@@ -129,9 +129,20 @@
     border: 2px solid rgb(194, 24, 24);
 }
 
-.form .error::after {
-    content: "Passwords do not match";
+.password-label {
+    position: relative;
 }
+
+.password-label::after {
+    position: absolute;
+    top:50px;
+    left:0px;
+    content: "* Passwords do not match";
+    color: red;
+    margin-left: 1px;
+}
+
+
 .form p {
     font-weight: 900;
     font-size: larger;
