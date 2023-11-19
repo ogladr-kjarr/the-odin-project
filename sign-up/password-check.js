@@ -4,18 +4,18 @@ const passwordLabel = document.querySelector(".password-label");
 
 
 function arePasswordsEqual() {
-    const isEqual = firstPasswordField.value.localeCompare(secondPasswordField.value) === 0;
-    return isEqual;
+    const areEqual = firstPasswordField.value.localeCompare(secondPasswordField.value) === 0;
+    return areEqual;
 }
 
 function arePasswordsFilled() {
-    const isNotEmpty = firstPasswordField.value.length !== 0 && secondPasswordField.value.length !== 0;
-    return isNotEmpty;
+    const areNotEmpty = firstPasswordField.value.length !== 0 && secondPasswordField.value.length !== 0;
+    return areNotEmpty;
 }
 
 function arePasswordsMarkedInError() {
-    const areError = firstPasswordField.classList.contains('error');
-    return areError;
+    const areErrorMarked = firstPasswordField.classList.contains('error');
+    return areErrorMarked;
 }
 
 function toggleStyling() {
