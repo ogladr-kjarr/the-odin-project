@@ -35,33 +35,33 @@
             <div class="form">
                 <p>Let's do this!</p>
 
-                <form action="dummyform/signup" method="post" class="form-controls">
+                <form action="dummyform/signup" method="post" class="form-controls" id="sign-up-form">
                     <div class="left-form-column">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" tabindex="1">
+                        <input type="text" id="first-name" tabindex="1" required>
 
                         <label for="email">EMAIL</label>
                         <input type="email" id="email" tabindex="3">
 
                         <label for="password" class="password-label">PASSWORD</label>
-                        <input type="password" id="password" class="error" tabindex="5">
+                        <input type="password" id="password" class="error" tabindex="5" required>
                     </div>
 
                     <div class="right-form-column">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" tabindex="2">
+                        <input type="text" id="last-name" tabindex="2" required>
 
                         <label for="phone-number">PHONE NUMBER</label>
                         <input type="tel" id="phone-number" tabindex="4">
                         
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" class="error" tabindex="6">                        
+                        <input type="password" id="confirm-password" class="error" tabindex="6" required>                        
                     </div>
                 </form>
             </div>
 
             <div class="footer">
-                <button>Create Account</button>
+                <button form="sign-up-form">Create Account</button>
                 <p>Already have an account? <a href="dummyform/login">Log in</a></p>
             </div>
         </div>
